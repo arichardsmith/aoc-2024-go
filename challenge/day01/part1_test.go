@@ -34,3 +34,16 @@ func TestCalculateDistance(t *testing.T) {
 
 	assert.Equal(t, 11, res)
 }
+
+func TestSortedSlice(t *testing.T) {
+	s := sortedSlice{}
+
+	s.Insert(1)
+	assert.Equal(t, []int{1}, s.values)
+
+	s.Insert(3)
+	s.Insert(2)
+	s.Insert(4)
+	s.Insert(2)
+	assert.Equal(t, []int{1, 2, 2, 3, 4}, s.values)
+}
