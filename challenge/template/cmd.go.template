@@ -1,4 +1,4 @@
-package day01
+package day{{.DayPad}}
 
 import (
 	"fmt"
@@ -12,9 +12,6 @@ func RunPart(part int) error {
 	switch part {
 	case 1:
 		_, err := fmt.Println(part1(input))
-		return err
-	case 2:
-		_, err := fmt.Println(part2(input))
 		return err
 	}
 

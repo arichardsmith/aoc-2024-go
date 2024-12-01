@@ -1,4 +1,4 @@
-package day01
+package day{{.DayPad}}
 
 import (
 	"strings"
@@ -7,18 +7,17 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestParseFile(t *testing.T) {
-	i := 1
+func TestPart1(t *testing.T) {
+	// Test against the example input
 	input := `3   10
 4   20
 5   30
 `
-	for pair := range parseFile(strings.NewReader(input)) {
-		assert.Equal(t, i+2, pair.Left)
-		assert.Equal(t, i*10, pair.Right)
+	expected := 0
 
-		i++
-	}
+	res := part1(strings.NewReader(input))
+
+	assert.Equal(t, expected, res)
 }
 
 func TestCalculateDistance(t *testing.T) {

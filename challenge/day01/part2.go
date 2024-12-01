@@ -1,18 +1,10 @@
 package day01
 
 import (
-	"fmt"
 	"io"
-
-	"github.com/arichardsmith/aoc-2024-go/internal"
-	"github.com/spf13/cobra"
 )
 
-func part2(cmd *cobra.Command, args []string) {
-	fmt.Println(calculateSimilarityScore(internal.DefaultInputFile()))
-}
-
-func calculateSimilarityScore(input io.Reader) int {
+func part2(input io.Reader) int {
 	m := make(map[int]int)
 
 	var left []int

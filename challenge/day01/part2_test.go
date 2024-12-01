@@ -15,7 +15,7 @@ func TestPart2(t *testing.T) {
 3   9
 3   3`)
 
-	score := calculateSimilarityScore(input)
+	score := part2(input)
 
 	assert.Equal(t, 31, score)
 }
