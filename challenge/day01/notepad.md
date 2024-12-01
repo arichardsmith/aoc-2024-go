@@ -1,6 +1,6 @@
 ---
 url: https://adventofcode.com/2024/day/1
-complete: true
+completed: [1, 2]
 ---
 # Day 1: Historian Hysteria
 

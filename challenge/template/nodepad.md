@@ -1,6 +1,6 @@
 ---
 url: https://adventofcode.com/2024/day/{{.Day}}
-complete: false
+completed: []
 ---
 
 # Day {{.Day}}: 
