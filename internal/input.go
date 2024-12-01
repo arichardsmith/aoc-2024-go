@@ -14,7 +14,7 @@ import (
 // for a file named "input.txt" in the same package as the caller.
 // Borrowed from https://github.com/nlowe/aoc2023/blob/master/challenge/input.go
 func DefaultInputFile() (io.Reader, error) {
-	path, err := HereN(2, "input.txt")
+	path, err := HereN(3, "input.txt")
 	if err != nil {
 		return nil, err
 	}
@@ -60,6 +60,7 @@ func Here(elem ...string) (string, error) {
 
 func HereN(n int, elem ...string) (string, error) {
 	_, f, _, ok := runtime.Caller(n)
+
 	if !ok {
 		return "", fmt.Errorf("failed to determine call file")
 	}
