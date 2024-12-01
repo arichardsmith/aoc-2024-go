@@ -28,8 +28,6 @@ func runCreate(cmd *cobra.Command, args []string) {
 	day, _ := cmd.Flags().GetInt("day")
 	templateData := NewTemplateData(day)
 
-	fmt.Println(templateData)
-
 	srcDir, err := internal.HereN(1, "../challenge/template")
 	if err != nil {
 		fmt.Printf("Error determining template directory: %v\n", err)
@@ -43,7 +41,7 @@ func runCreate(cmd *cobra.Command, args []string) {
 	}
 
 	if _, err := os.Stat(destDir); err == nil {
-		fmt.Printf("Destination directory already exists: %s\n", destDir)
+		fmt.Printf("Code already exists for day %d\n", day)
 		return
 	}
 
@@ -107,7 +105,7 @@ func runCreate(cmd *cobra.Command, args []string) {
 		return
 	}
 
-	fmt.Printf("Successfully created day %d challenge\n", day)
+	fmt.Printf("Created boilerplate for day %d\n", day)
 }
 
 type TemplateData struct {
