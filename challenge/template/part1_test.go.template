@@ -1,0 +1,16 @@
+package day{{.DayPad}}
+
+import (
+	"strings"
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+const example = ``
+
+func TestPart1(t *testing.T) {
+	res := part1(strings.NewReader(example))
+
+	assert.Equal(t, 0, res)
+}
