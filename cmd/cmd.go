@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/arichardsmith/aoc-2024-go/challenge/day01"
+	"github.com/arichardsmith/aoc-2024-go/challenge/day02"
 	"github.com/spf13/cobra"
 )
 
@@ -40,6 +41,8 @@ func run(cmd *cobra.Command, args []string) {
 	switch day {
 	case 1:
 		err = day01.RunPart(part)
+	case 2:
+		err = day02.RunPart(part)
 	default:
 		fmt.Printf("No day %d\n\n", day)
 		fmt.Printf("Run `aoc2024 create --day %d` to create a new day\n", day)
